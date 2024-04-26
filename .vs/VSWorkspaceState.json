@@ -11,8 +11,9 @@
     "",
     "\\Scripts",
     "\\Source",
+    "\\Source\\Renderer",
     "\\Source\\Window"
   ],
-  "SelectedNode": "\\.gitignore",
+  "SelectedNode": "\\Source\\main.cpp",
   "PreviewInSolutionExplorer": false
 }

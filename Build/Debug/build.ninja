@@ -116,6 +116,15 @@ build Source\CMakeFiles\Source.dir\main.cpp.obj: CXX_COMPILER__Source_unscanned_
   TARGET_COMPILE_PDB = Source\CMakeFiles\Source.dir\
   TARGET_PDB = Source\Source.pdb
 
+build Source\CMakeFiles\Source.dir\Renderer\Renderer.cpp.obj: CXX_COMPILER__Source_unscanned_Debug C$:\Users\melpo\Desktop\DX11tutorial\Source\Renderer\Renderer.cpp || cmake_object_order_depends_target_Source
+  DEFINES = -DFORCEINLINE=__forceinline -DRUNTIME_API=__declspec(dllexport) -DTUTORIAL_DEBUG
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20
+  INCLUDES = -IC:\Users\melpo\Desktop\DX11tutorial\Source -IC:\Users\melpo\Desktop\DX11tutorial\Build\Debug\_deps\glfw-src\include
+  OBJECT_DIR = Source\CMakeFiles\Source.dir
+  OBJECT_FILE_DIR = Source\CMakeFiles\Source.dir\Renderer
+  TARGET_COMPILE_PDB = Source\CMakeFiles\Source.dir\
+  TARGET_PDB = Source\Source.pdb
+
 build Source\CMakeFiles\Source.dir\Window\Window.cpp.obj: CXX_COMPILER__Source_unscanned_Debug C$:\Users\melpo\Desktop\DX11tutorial\Source\Window\Window.cpp || cmake_object_order_depends_target_Source
   DEFINES = -DFORCEINLINE=__forceinline -DRUNTIME_API=__declspec(dllexport) -DTUTORIAL_DEBUG
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1 -std:c++20
@@ -133,10 +142,10 @@ build Source\CMakeFiles\Source.dir\Window\Window.cpp.obj: CXX_COMPILER__Source_u
 #############################################
 # Link the executable Source\Source.exe
 
-build Source\Source.exe: CXX_EXECUTABLE_LINKER__Source_Debug Source\CMakeFiles\Source.dir\main.cpp.obj Source\CMakeFiles\Source.dir\Window\Window.cpp.obj | _deps\glfw-build\src\glfw3.lib || _deps\glfw-build\src\glfw3.lib
+build Source\Source.exe: CXX_EXECUTABLE_LINKER__Source_Debug Source\CMakeFiles\Source.dir\main.cpp.obj Source\CMakeFiles\Source.dir\Renderer\Renderer.cpp.obj Source\CMakeFiles\Source.dir\Window\Window.cpp.obj | _deps\glfw-build\src\glfw3.lib || _deps\glfw-build\src\glfw3.lib
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Ob0 /Od /RTC1
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
-  LINK_LIBRARIES = _deps\glfw-build\src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
+  LINK_LIBRARIES = _deps\glfw-build\src\glfw3.lib  d3d11.lib  d3dcompiler.lib  dxguid.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = Source\CMakeFiles\Source.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
